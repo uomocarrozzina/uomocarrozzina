@@ -10,23 +10,27 @@ interface ProfileCardProps {
 
 export default function ProfileCard({ name, bio, profileImageUrl }: ProfileCardProps) {
   return (
-    <div className="profile-card max-w-md w-full bg-card rounded-xl shadow-md p-6 md:p-8">
+    <div className="profile-card max-w-md w-full rounded-xl shadow-md p-6 md:p-8 
+                  border-2 border-primary/30 dark:border-primary/20 animate-border-pulse
+                  bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800
+                  backdrop-blur-sm">
       <div className="flex justify-end mb-4">
         <ThemeToggle />
       </div>
       
       <div className="flex flex-col items-center space-y-4 mb-8">
-        <div className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-primary/20 dark:ring-primary/40">
+        <div className="relative w-32 h-32 rounded-full overflow-hidden ring-4 ring-primary/30 dark:ring-primary/50 shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 mix-blend-overlay"></div>
           <Avatar className="w-full h-full">
             <AvatarImage 
               src={profileImageUrl} 
               alt={name} 
               className="w-full h-full object-cover"
             />
-            <AvatarFallback className="text-4xl">{name.charAt(0)}</AvatarFallback>
+            <AvatarFallback className="text-4xl bg-gradient-to-r from-primary to-secondary text-white">{name.charAt(0)}</AvatarFallback>
           </Avatar>
         </div>
-        <h1 className="text-2xl font-bold text-card-foreground text-center">{name}</h1>
+        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-center">{name}</h1>
         <p className="text-muted-foreground text-center text-sm">
           {bio}
         </p>

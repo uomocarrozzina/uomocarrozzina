@@ -6,6 +6,8 @@ interface SocialLink {
   url: string;
   icon: React.ReactNode;
   color: string;
+  gradientFrom: string;
+  gradientTo: string;
 }
 
 export default function SocialLinks() {
@@ -13,20 +15,26 @@ export default function SocialLinks() {
     {
       name: "Instagram",
       url: "https://instagram.com/",
-      icon: <FaInstagram className="text-xl text-pink-600 dark:text-pink-400" />,
-      color: "text-pink-600 dark:text-pink-400"
+      icon: <FaInstagram className="text-xl text-white" />,
+      color: "text-pink-600 dark:text-pink-400",
+      gradientFrom: "from-pink-500",
+      gradientTo: "to-yellow-500"
     },
     {
       name: "TikTok",
       url: "https://tiktok.com/",
-      icon: <FaTiktok className="text-xl text-foreground" />,
-      color: "text-foreground"
+      icon: <FaTiktok className="text-xl text-white" />,
+      color: "text-foreground",
+      gradientFrom: "from-black dark:from-white",
+      gradientTo: "to-gray-800 dark:to-gray-300"
     },
     {
       name: "Twitch",
       url: "https://twitch.tv/",
-      icon: <FaTwitch className="text-xl text-purple-600 dark:text-purple-400" />,
-      color: "text-purple-600 dark:text-purple-400"
+      icon: <FaTwitch className="text-xl text-white" />,
+      color: "text-purple-600 dark:text-purple-400",
+      gradientFrom: "from-purple-600",
+      gradientTo: "to-primary"
     }
   ];
 
@@ -38,13 +46,17 @@ export default function SocialLinks() {
           href={link.url} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="social-link flex items-center p-4 bg-card dark:bg-accent border border-border rounded-lg 
-                    shadow-sm hover:shadow-md dark:hover:shadow-gray-700/40 w-full text-left
+          className="social-link flex items-center p-4 bg-white dark:bg-gray-800 border-2 border-primary/10 dark:border-primary/20 rounded-lg 
+                    shadow-sm hover:shadow-md hover:shadow-primary/10 dark:hover:shadow-primary/30 w-full text-left
                     text-card-foreground transition-all"
         >
-          <span className="mr-3">{link.icon}</span>
+          <span className={`mr-3 flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-r ${link.gradientFrom} ${link.gradientTo} shadow-md`}>
+            {link.icon}
+          </span>
           <span className="font-medium">{link.name}</span>
-          <ArrowRight className="text-muted-foreground ml-auto h-4 w-4" />
+          <span className="ml-auto p-1 rounded-full bg-secondary/10 dark:bg-secondary/20">
+            <ArrowRight className="text-secondary h-4 w-4" />
+          </span>
         </a>
       ))}
     </div>

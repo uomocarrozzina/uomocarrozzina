@@ -10,20 +10,20 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 266 68% 50%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 120 70% 50%;
+    --secondary-foreground: 120 10% 10%;
+    --muted: 210 20% 95.9%;
+    --muted-foreground: 210 10% 46.1%;
+    --accent: 120 70% 50%;
+    --accent-foreground: 120 10% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 266 68% 50%;
-    --radius: 0.5rem;
+    --border: 210 30% 90%;
+    --input: 210 30% 90%;
+    --ring: 210 100% 50%;
+    --radius: 0.75rem;
   }
 
   .dark {
@@ -33,19 +33,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 6%;
     --popover-foreground: 0 0% 98%;
-    --primary: 266 68% 50%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 5.9% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 120 70% 50%;
+    --secondary-foreground: 210 10% 10%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
+    --accent: 120 70% 45%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
+    --border: 210 50% 30%;
     --input: 240 3.7% 15.9%;
-    --ring: 266 68% 50%;
+    --ring: 210 100% 50%;
   }
 
   * {
@@ -62,9 +62,24 @@
 }
 
 .profile-card {
-  @apply transition-shadow duration-500;
+  @apply transition-all duration-500;
 }
 
 .dark .profile-card {
   @apply shadow-xl shadow-primary/20;
+}
+
+/* Animazioni sottili per gli elementi */
+@keyframes pulse-border {
+  0%, 100% { border-color: rgba(33, 150, 243, 0.2); }
+  50% { border-color: rgba(33, 150, 243, 0.5); }
+}
+
+.animate-border-pulse {
+  animation: pulse-border 4s ease-in-out infinite;
+}
+
+/* Miglioramenti per le transizioni di hover */
+.social-link:hover {
+  @apply shadow-md shadow-primary/20 dark:shadow-primary/30 border-primary/30 dark:border-primary/40;
 }
