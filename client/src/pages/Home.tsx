@@ -12,7 +12,7 @@ export default function Home() {
         <ProfileCard 
           name="uomocarrozzina23"
           bio="Qui trovi i miei social"
-          profileImageUrl="https://i.imgur.com/6VBx3io.png"
+          profileImageUrl="https://i.ibb.co/TxXYypmf/5-FF89982-582-D-4-A56-91-C2-3-D59915-B30-CB.jpg"
         />
         
         <footer className="mt-8 text-center">
