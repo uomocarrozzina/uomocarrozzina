@@ -11,7 +11,7 @@ export default function Home() {
       <div className="container relative z-10 mx-auto px-4 py-12 md:py-24 flex flex-col items-center justify-center">
         <ProfileCard 
           name="uomocarrozzina23"
-          bio="Benvenuto alla mia pagina personale"
+          bio="Qui trovi i miei social"
           profileImageUrl="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80"
         />
         

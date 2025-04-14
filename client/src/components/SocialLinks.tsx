@@ -14,7 +14,7 @@ export default function SocialLinks() {
   const socialLinks: SocialLink[] = [
     {
       name: "Instagram",
-      url: "https://instagram.com/",
+      url: "https://www.instagram.com/uomocarrozzina23?igsh=MTV5eno3Znh5czQxYQ==",
       icon: <FaInstagram className="text-xl text-white" />,
       color: "text-pink-600 dark:text-pink-400",
       gradientFrom: "from-pink-500",
@@ -22,7 +22,7 @@ export default function SocialLinks() {
     },
     {
       name: "TikTok",
-      url: "https://tiktok.com/",
+      url: "https://www.tiktok.com/@uomocarrozzina23?_t=ZN-8vX3z8JiP4g&_r=1",
       icon: <FaTiktok className="text-xl text-white" />,
       color: "text-foreground",
       gradientFrom: "from-black dark:from-white",
@@ -30,7 +30,7 @@ export default function SocialLinks() {
     },
     {
       name: "Twitch",
-      url: "https://twitch.tv/",
+      url: "https://www.twitch.tv/uomocarrozzina23",
       icon: <FaTwitch className="text-xl text-white" />,
       color: "text-purple-600 dark:text-purple-400",
       gradientFrom: "from-purple-600",
