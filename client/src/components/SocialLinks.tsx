@@ -26,8 +26,8 @@ export default function SocialLinks() {
       url: "https://www.tiktok.com/@uomocarrozzina23?_t=ZN-8vX3z8JiP4g&_r=1",
       icon: <SiTiktok className="text-xl text-white" />,
       color: "text-foreground",
-      gradientFrom: "from-black dark:from-white",
-      gradientTo: "to-gray-800 dark:to-gray-300"
+      gradientFrom: "from-cyan-400",
+      gradientTo: "to-pink-500"
     },
     {
       name: "Twitch",
