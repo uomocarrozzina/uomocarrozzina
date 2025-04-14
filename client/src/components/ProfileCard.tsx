@@ -13,7 +13,9 @@ export default function ProfileCard({ name, bio, profileImageUrl }: ProfileCardP
     <div className="profile-card max-w-md w-full rounded-xl shadow-md p-6 md:p-8 
                   border-2 border-primary/30 dark:border-primary/20 animate-border-pulse
                   bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800
-                  backdrop-blur-sm">
+                  backdrop-blur-sm
+                  transform perspective-1000 hover:rotate-y-1 hover:rotate-x-1 hover:scale-[1.01] hover:shadow-xl hover:shadow-primary/20
+                  transition-all duration-300">
       <div className="flex justify-end mb-4">
         <ThemeToggle />
       </div>

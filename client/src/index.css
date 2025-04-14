@@ -79,7 +79,13 @@
   animation: pulse-border 4s ease-in-out infinite;
 }
 
-/* Miglioramenti per le transizioni di hover */
+/* Miglioramenti per le transizioni di hover e effetti 3D */
+.social-link {
+  transform: perspective(1000px) rotateX(0) rotateY(0);
+  transition: transform 0.3s ease, shadow 0.3s ease, border 0.3s ease;
+}
+
 .social-link:hover {
   @apply shadow-md shadow-primary/20 dark:shadow-primary/30 border-primary/30 dark:border-primary/40;
+  transform: perspective(1000px) rotateX(2deg) rotateY(1deg) translateZ(10px);
 }

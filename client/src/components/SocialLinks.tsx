@@ -1,4 +1,5 @@
-import { FaInstagram, FaTiktok, FaTwitch } from "react-icons/fa";
+import { FaInstagram, FaTwitch } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 import { ArrowRight } from "lucide-react";
 
 interface SocialLink {
@@ -23,7 +24,7 @@ export default function SocialLinks() {
     {
       name: "TikTok",
       url: "https://www.tiktok.com/@uomocarrozzina23?_t=ZN-8vX3z8JiP4g&_r=1",
-      icon: <FaTiktok className="text-xl text-white" />,
+      icon: <SiTiktok className="text-xl text-white" />,
       color: "text-foreground",
       gradientFrom: "from-black dark:from-white",
       gradientTo: "to-gray-800 dark:to-gray-300"
