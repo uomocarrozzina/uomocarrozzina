@@ -32,7 +32,7 @@ export default function ProfileCard({ name, bio, profileImageUrl }: ProfileCardP
             <AvatarFallback className="text-4xl bg-gradient-to-r from-primary to-secondary text-white">{name.charAt(0)}</AvatarFallback>
           </Avatar>
         </div>
-        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary text-center">{name}</h1>
+        <h1 className="text-2xl font-bold text-lime-500 text-center">{name}</h1>
         <p className="text-muted-foreground text-center text-sm">
           {bio}
         </p>
